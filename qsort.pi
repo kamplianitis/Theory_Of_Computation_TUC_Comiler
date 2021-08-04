@@ -1,0 +1,53 @@
+// Swap the elements of array a at positions i and j
+// assuming that i and j are valid indices
+func swap(a[] int, i int, j int) {
+    var temp int;
+    temp = a[i];
+    a[i] = a[j];
+    a[j] = temp;
+};
+
+// Impelementation of the quick sort algorithm
+func quickSort(a[] int, low int, high int) {
+    var pivot, i, j int;
+    if(low < high) {
+        pivot = low;
+        i = low;
+        j = high;
+        while (i < j) {
+            while(a[i] <= a[pivot] and i < high)
+                i = i + 1;
+            while(a[j] > a[pivot])
+                j = j-1;
+            if (i < j)
+                swap(a,i,j);
+        }
+        swap(a,pivot,j);
+        quickSort(a, low, j - 1);
+        quickSort(a, j + 1, high);
+    }
+};
+
+// Print contents of an array
+func printArray(a[] int, size int) {
+    var i int;
+    
+    for(i = 0; i < size; i = i +1) {
+        writeInt(a[i]);
+        if (i==size-1)
+            continue;
+        writeString(", ");
+    }
+    writeString("\n");
+};
+
+// Test quickSort using two example arrays
+func begin() {
+    const aSize = 10, bSize = 100 int;
+    var b[100], i int;
+     
+    for (i = 0 ;i < bSize;i = i + 1)
+        b[i] = bSize - i;
+    quickSort(b,0,bSize-1);
+    printArray(b,bSize);
+};

@@ -1,0 +1,26 @@
+/* A complex program containing arrays, modulo and power operators */
+/* Should print:
+   1
+   1821
+ */
+
+func check(a[] int) int {
+    a[2] = 1821 ;
+    return a[2];
+};
+
+func begin() {
+  var numbers[3] int;
+
+  numbers[0] = 0;
+  numbers[1] = 1;
+  numbers[2] = numbers[1];
+  
+  writeInt(numbers[2]);
+  writeString("\n");
+  
+  numbers[0] = check(numbers);
+  
+  writeInt(numbers[2]);  
+  writeString("\n");
+};

@@ -1,0 +1,32 @@
+var x , y int;
+
+var str string;
+var kappa, gamma string;
+
+var realtest = 10.5 real;
+
+func start(var x int, var y real)
+{
+	var xi = 5 real;
+}
+
+
+func begin()
+{
+	y = x +2 + start(x,y);
+	y = (x and y) and (5);
+	
+	for(var x = 5 int; x == 5; x)
+	{
+		break;
+	}
+	if (x == 7)
+	{
+		var x = 56 real;
+	}
+	
+	if(x == 7)
+		var x = 3 int;
+	else
+		var y = 3 int;
+}

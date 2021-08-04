@@ -1,0 +1,30 @@
+// File: useless.pi
+// a piece of Pi code for demonstration purpose
+
+
+const N = -100 int;
+
+
+var a,b int;
+
+func cube(i int) int 
+{
+	return i*i*i;
+};
+
+func add(n int, k int) int 
+{
+	var j int;
+	
+	j = (N-n) + cube(k);
+	writeInt(j);
+	return j;
+};
+
+
+func begin()
+{
+	a = readInt();
+	b = readInt();
+	add(a,b);
+};
