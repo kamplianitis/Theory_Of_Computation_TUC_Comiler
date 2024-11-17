@@ -64,7 +64,7 @@ PI language supports the following delimeters:
 =, +=, -=, *=, /=, %=
 </p>
 
-# PI synstax Analysis
+# PI syntax Analysis
 
 ## Main function
 The main structural thing of PI language is main.
@@ -75,3 +75,24 @@ def main():
     main body
 enddef;
 ```
+
+In general any fuction can be declared as follows:
+```pi
+def function(arg1, arg2, ...) -> return_value:
+    ...
+    ...
+    ...
+    return return_value;
+enddef;
+```
+
+Every other aspect of the PI language follows basic languages' syntax.
+
+# Repository structure
+The repository consists of the following structure:
+
+- `Testcases`: The directory contains the test cases including both files written in PI but also their respective c ones.
+
+# How to execute the repository
+
+Execute the following 
